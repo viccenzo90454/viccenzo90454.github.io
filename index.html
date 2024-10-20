@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Fiji, um belo arquipélago no Pacífico Sul, com praias deslumbrantes e rica cultura.">
+    <title>VOO DO AMOR</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa;
+            color: #333;
+        }
+        header {
+            background-color: #00796b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-bottom: 5px solid #004d40;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        main {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #00796b;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        h2 {
+            color: #004d40;
+            margin-top: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+            font-size: 1.8em;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+        }
+        article {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            transition: transform 0.3s;
+        }
+        article:hover {
+            transform: scale(1.02);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: #b2dfdb;
+            margin: 8px 0;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+            cursor: pointer;
+        }
+        ul li:hover {
+            background: #00796b;
+            color: white;
+        }
+        .hidden {
+            display: none;
+        }
+        .video-container {
+            max-width: 800px;
+            margin: 20px 0;
+        }
+        .video-button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        .video-button:hover {
+            background-color: #004d40;
+        }
+        span {
+            cursor: pointer;
+            color: #00796b;
+            text-decoration: underline;
+        }
+        span:hover {
+            color: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Voo Do Amor</h1>
+    </header>
+    <main>
+        <article>
+            <h2><strong>Bandeira de Fiji</strong></h2>
+            <img src="th.jpeg" alt="Bandeira de Fiji">
+            <p>A bandeira de Fiji apresenta um fundo azul com a união do Reino Unido no canto superior esquerdo, simbolizando a relação histórica entre Fiji e o Reino Unido. O brasão de armas central exibe elementos que representam a cultura e a agricultura do país, como uma planta de cana-de-açúcar, um coqueiro e um boi.</p>
+            <p>O azul representa o oceano que cerca as ilhas, enquanto as imagens do brasão refletem a biodiversidade e a agricultura essenciais para a economia de Fiji. A bandeira foi adotada em 10 de outubro de 1970, quando Fiji se tornou uma república independente, refletindo a identidade cultural do país.</p>
+        </article>
+        <article>
+            <h2><strong>Sobre Fiji</strong></h2>
+            <img src="fiji-beach.jpeg" alt="Praia paradisíaca em Fiji">
+            <p>Fiji é um arquipélago localizado no Pacífico Sul, composto por mais de 300 ilhas, conhecidas por suas belas praias, águas cristalinas e rica cultura. A capital é Suva, situada na ilha de Viti Levu, a maior do país.</p>
+            <p>A geografia de Fiji é diversificada, com montanhas, florestas tropicais e recifes de coral. O clima tropical proporciona temperaturas quentes durante todo o ano, com uma estação chuvosa de novembro a abril.</p>
+            <p>As atividades populares em Fiji incluem mergulho, snorkeling, caminhadas em trilhas na selva, e conhecer a cultura local através de festivais e danças tradicionais.</p>
+        </article>
+        <article>
+            <h2><strong>Atrações Principais</strong></h2>
+            <ul>
+                <li onclick="toggleInfo('vitiLevuInfo')">Ilha de Viti Levu</li>
+                <li onclick="toggleInfo('vanuaLevuInfo')">Ilha de Vanua Levu</li>
+                <li onclick="toggleInfo('boumaInfo')">Parque Nacional de Bouma</li>
+                <li onclick="toggleInfo('recifesInfo')">Recifes de Coral</li>
+            </ul>
+            <div id="vitiLevuInfo" class="hidden">
+                <img src="OIP.jpeg" alt="Ilha de Viti Levu">
+                <p>A Ilha de Viti Levu é a maior ilha de Fiji, com uma rica biodiversidade e várias atrações turísticas, incluindo o Parque Nacional de Bouma e a cidade de Nadi, onde se encontra o famoso Templo de Sri Siva Subramaniya.</p>
+                <p>É também o ponto de partida para explorar outras ilhas e desfrutar de atividades como rafting, caminhadas e experiências culturais.</p>
+            </div>
+            <div id="vanuaLevuInfo" class="hidden">
+                <img src="R.jpeg" alt="Ilha de Vanua Levu">
+                <p>A Ilha de Vanua Levu é a segunda maior ilha de Fiji, conhecida por suas florestas tropicais exuberantes e belas praias. A cidade de Labasa é o centro administrativo da ilha.</p>
+                <p>É famosa por suas atividades de ecoturismo, mergulho e snorkel nos recifes de coral. Os visitantes também podem explorar as aldeias locais e experimentar a cultura fijiana autêntica.</p>
+            </div>
+            <div id="boumaInfo" class="hidden">
+                <img src="abaixe-cachoeiras-de-tavoro-no-parque-nacional-da-herança-de-bouma-taveuni-91414593.webp" alt="Parque Nacional de Bouma">
+                <p>O Parque Nacional de Bouma está localizado na ilha de Taveuni e é conhecido por suas trilhas cênicas, cachoeiras e rica biodiversidade. É um ótimo local para caminhadas e observação da vida selvagem.</p>
+                <p>Os visitantes podem desfrutar de atividades como natação nas cachoeiras, caminhadas em meio à floresta tropical e exploração da flora e fauna únicas da região.</p>
+            </div>
+            <div id="recifesInfo" class="hidden">
+                <img src="brilliant-fiji-coral-reef-with-soft-corals-and-schools-anthias-fishes-picture-34717-5547.jpg" alt="Recifes de Coral de Fiji">
+                <p>Os recifes de coral de Fiji são famosos por sua beleza e diversidade marinha. Eles são um dos destinos de mergulho mais procurados do mundo, com águas claras e vida marinha vibrante.</p>
+                <p>Os recifes oferecem excelentes oportunidades para snorkeling, mergulho e observação de peixes tropicais, tartarugas e corais coloridos. É um lugar ideal para explorar a vida submarina e apreciar a beleza natural do Oceano Pacífico.</p>
+            </div>
+        </article>
+        <article>
+            <h2><strong>Cultura Fijiana</strong></h2>
+            <img src="OIP (1).jpeg" alt="Dança tradicional fijiana">
+            <p>A cultura de Fiji é vibrante, com tradições que incluem danças, música e festivais. Os habitantes locais são conhecidos pela sua hospitalidade e pela prática do "kava", uma bebida tradicional feita a partir da raiz de uma planta local.</p>
+            <p>A dança fijiana, chamada "meke", é uma parte essencial das celebrações culturais e é frequentemente acompanhada por músicas tradicionais, que incluem instrumentos como o "lali" (tambor) e a "bongo".</p>
+            <p>A gastronomia de Fiji é diversificada, destacando-se pratos à base de frutos do mar, frutas tropicais e vegetais. Um prato popular é o "kokoda", feito com peixe marinado em suco de limão e leite de coco.</p>
+            <button class="video-button" onclick="window.open('https://www.youtube.com/embed/xmJ9KGsLu24', '_blank')">Assistir ao Vídeo sobre a Cultura de Fiji</button>
+        </article>
+        <article>
+            <h2><strong>Endereços Notáveis em Fiji</strong></h2>
+            <ul>
+                <li><a href="https://www.google.com/maps/search/?api=1&query=Suva,+Viti+Levu,+Fiji" target="_blank"><strong>Suva:</strong> Suva, Viti Levu, Fiji</a></li>
+                <li><a href="https://www.google.com/maps/search/?api=1&query=20-22+Queens+Rd,+Nadi,+Viti+Levu,+Fiji" target="_blank"><strong>Templo de Sri Siva Subramaniya:</strong> 20-22 Queens Rd, Nadi, Viti Levu, Fiji</a></li>
+                <li><a href="https://www.google.com/maps/search/?api=1&query=Parque+Nacional+de+Bouma,+Taveuni+Island,+Fiji" target="_blank"><strong>Parque Nacional de Bouma:</strong> Taveuni Island, Fiji</a></li>
+                <li><a href="https://www.google.com/maps/search/?api=1&query=Mana+Island,+Mamanuca+Islands,+Fiji" target="_blank"><strong>Ilha de Mana:</strong> Mana Island, Mamanuca Islands, Fiji</a></li>
+                <li><a href="https://www.google.com/maps/search/?api=1&query=Coral+Coast,+Viti+Levu,+Fiji" target="_blank"><strong>Coral Coast:</strong> Coral Coast, Viti Levu, Fiji</a></li>
+                <li><a href="https://www.google.com/maps/search/?api=1&query=Taveuni+Island,+Fiji" target="_blank"><strong>Ilha de Taveuni:</strong> Taveuni Island, Fiji</a></li>
+                <li><a href="https://www.google.com/maps/search/?api=1&query=Ba,+Viti+Levu,+Fiji" target="_blank"><strong>Ba:</strong> Ba, Viti Levu, Fiji</a></li>
+            </ul>
+        </article>
+        <article>
+            <h2><strong>Informações sobre Fiji</strong></h2>
+            <ul>
+                <li onclick="toggleInfo('climaInfo')">Clima</li>
+                <li onclick="toggleInfo('vegetacaoInfo')">Vegetação</li>
+                <li onclick="toggleInfo('relevoInfo')">Relevo</li>
+                <li onclick="toggleInfo('faunaInfo')">Fauna</li>
+                <li onclick="toggleInfo('populacaoInfo')">População</li>
+                <li onclick="toggleInfo('idhInfo')">IDH</li>
+                <li onclick="toggleInfo('governoInfo')">Tipo de Governo</li>
+                <li onclick="toggleInfo('moedaInfo')">Moeda</li>
+                <li onclick="toggleInfo('pibInfo')">Pib</li>
+            </ul>
+            <div id="climaInfo" class="hidden">
+                <img src="clima.jpeg" alt="Clima">
+                <p>Fiji possui um clima tropical, com temperaturas médias variando entre 20°C e 30°C. A estação chuvosa vai de novembro a abril, enquanto a estação seca ocorre de maio a outubro.</p>
+            </div>
+            <div id="vegetacaoInfo" class="hidden">
+                <img src="vegetacao.jpeg" alt="Vegetação">
+                <p>A vegetação de Fiji é rica e diversificada, com florestas tropicais, plantas endêmicas e extensos recifes de coral. A ilha possui diversas espécies de árvores, incluindo a árvore de pão e coqueiros.</p>
+            </div>
+            <div id="relevoInfo" class="hidden">
+                <img src="relevo.jpg" alt="Relevo">
+                <p>O relevo de Fiji é montanhoso, com várias ilhas apresentando picos altos e vales profundos, criando paisagens deslumbrantes. As ilhas são formadas principalmente por rochas vulcânicas.</p>
+            </div>
+            <div id="faunaInfo" class="hidden">
+                <img src="fauna.jpg" alt="Aves do Fiji"> 
+                <img src="fauna2.webp" alt="Animal Vertebrado">
+                <p>A fauna de Fiji é diversa e única, com várias espécies endêmicas. Destacam-se aves coloridas, como o kākā, e morcegos, além de uma rica vida marinha em recifes de corais, com peixes tropicais e tartarugas.</p>
+                <p>As florestas abrigam lagartos e borboletas. Essa biodiversidade enfrenta ameaças, tornando a conservação essencial.</p>
+            </div>
+            <div id="populacaoInfo" class="hidden">
+                <p>A população de Fiji é de aproximadamente 900.000 habitantes, composta principalmente por fijianos indígenas, descendentes de indianos e uma pequena porcentagem de outras etnias.</p>
+            </div>
+            <div id="idhInfo" class="hidden">
+                <p>O Índice de Desenvolvimento Humano (IDH) de Fiji é considerado médio, com um valor em torno de 0,7, refletindo melhorias nas áreas de saúde, educação e renda.</p>
+            </div>
+            <div id="governoInfo" class="hidden">
+                <p>Fiji é uma república parlamentar, com um sistema político democrático. O Presidente é o chefe de estado, enquanto o Primeiro-Ministro é o chefe de governo.</p>
+                <p>Constituição: A Constituição de 2013 é a base legal do país, garantindo direitos fundamentais e estabelecendo os princípios do governo democrático.
+
+                    <p>Separação dos Poderes: O governo é dividido em três poderes: Executivo, Legislativo e Judiciário, assegurando um sistema de freios e contrapesos.</p>
+                    
+                    <p>Direitos Humanos: A Constituição garante direitos e liberdades fundamentais, incluindo liberdade de expressão, de associação e de religião.</p>
+                    
+                    <p> Eleições Justas: As leis garantem a realização de eleições livres e justas, com um sistema de votação proporcional.</p>
+                    
+                    <p>Governo Local: Existem disposições para a administração descentralizada, permitindo que comunidades locais participem da governança.</p>
+            </div>
+            <div id="pibInfo" class="hidden">
+                <img src="pib.png" alt="pib">
+                <p>O PIB de Fiji é estimado em cerca de 5 bilhões de dólares, com o turismo como principal motor econômico, seguido pela agricultura e pesca. O PIB per capita é de aproximadamente 5.800 dólares, refletindo desafios como a diversificação econômica e a adaptação às mudanças climáticas.</p>
+            </div>
+            <div id="moedaInfo" class="hidden">
+                <img src="moeda.jpeg" alt="Moeda">
+                <p>A moeda oficial de Fiji é o dólar fijiano (FJD). Em relação à conversão, 1 dólar fijiano costuma valer cerca de 2 a 3 reais brasileiros.</p>
+            </div>
+        </article>
+        <article>
+            <div class="gastos-fiji">
+                <h2>Média de Gastos em Fiji</h2>
+                <p>A média de gastos em Fiji pode variar bastante dependendo do estilo de viagem. Aqui está uma estimativa:</p>
+            
+                <h3>Acomodações</h3>
+                <ul>
+                    <li><strong>Econômicos</strong>: $30 a $80 por noite.</li>
+                    <li><strong>Médio porte</strong>: $100 a $200 por noite.</li>
+                    <li><strong>Luxuosos</strong>: $300 a $600 por noite.</li>
+                </ul>
+            
+                <h3>Alimentação</h3>
+                <ul>
+                    <li><strong>Restaurantes locais</strong>: $10 a $20 por refeição.</li>
+                    <li><strong>Restaurantes de médio porte</strong>: $20 a $50 por refeição.</li>
+                </ul>
+            
+                <h3>Transporte</h3>
+                <ul>
+                    <li><strong>Transporte local</strong>: $1 a $5 por viagem.</li>
+                    <li><strong>Aluguel de carro</strong>: $40 a $80 por dia.</li>
+                </ul>
+            
+                <h3>Atividades</h3>
+                <ul>
+                    <li><strong>Excursões e passeios</strong>: $50 a $150 por dia, dependendo da atividade.</li>
+                </ul>
+            
+                <h3>Estimativa Mensal</h3>
+                <ul>
+                    <li><strong>Econômica</strong>: cerca de $1.500 a $2.000.</li>
+                    <li><strong>Médio porte</strong>: cerca de $3.000 a $4.500.</li>
+                    <li><strong>Luxo</strong>: $6.000 ou mais.</li>
+                </ul>
+            
+                <p>Esses valores são aproximados e podem variar conforme a época do ano e as escolhas individuais.</p>
+            </div>
+        </article>
+        <article>
+            <div class="publico-alvo">
+                <h2>Público-Alvo do Turismo em Fiji</h2>
+                
+                <div class="segmento">
+                    <img src="relaxamento.jpeg" alt="Relaxamento em Fiji">
+                    <h3>Turistas em Busca de Relaxamento</h3>
+                    <p>Pessoas que desejam férias tranquilas em praias paradisíacas e resorts de luxo.</p>
+                </div>
+            
+                <div class="segmento">
+                    <img src="mergulho.jpeg" alt="Aventuras em Fiji">
+                    <h3>Aventureiros</h3>
+                    <p>Viajantes interessados em atividades como mergulho, snorkeling, caminhadas e esportes aquáticos.</p>
+                </div>
+            
+                <div class="segmento">
+                    <img src="lua de mel.jpg" alt="Lua de Mel em Fiji">
+                    <h3>Casais e Lua de Mel</h3>
+                    <p>Casais atraídos por paisagens deslumbrantes e ambiente romântico.</p>
+                </div>
+            
+                <div class="segmento">
+                    <img src="familia.jpg" alt="Famílias em Fiji">
+                    <h3>Famílias</h3>
+                    <p>Famílias em busca de experiências culturais e atividades ao ar livre em um ambiente seguro.</p>
+                </div>
+            
+                <div class="segmento">
+                    <img src="ecoturistas.jpg" alt="Ecoturismo em Fiji">
+                    <h3>Ecoturistas</h3>
+                    <p>Visitantes que desejam explorar a biodiversidade e participar de atividades sustentáveis.</p>
+                </div>
+            
+                <div class="segmento">
+                    <img src="cultura.jpeg" alt="Cultura Fijiana">
+                    <h3>Apreciadores da Cultura</h3>
+                    <p>Viajantes interessados em aprender sobre a rica cultura fijiana, incluindo tradições e culinária.</p>
+                </div>
+            </div>
+            
+        </article>
+        <article>
+            <div class="vantagens-desvantagens">
+                <h2>Vantagens e Desvantagens de Visitar Fiji</h2>
+                
+                <div class="vantagens">
+                    <h3>Vantagens</h3>
+                    <ul>
+                        <li><strong>Belezas Naturais:</strong> Praias paradisíacas, águas cristalinas e recifes de corais deslumbrantes.</li>
+                        <li><strong>Cultura Rica:</strong> Tradicional e vibrante, com danças e festivais autênticos.</li>
+                        <li><strong>Clima Tropical:</strong> Quente e ensolarado durante todo o ano.</li>
+                        <li><strong>Atividades Diversificadas:</strong> Mergulho, snorkeling, trilhas e experiências culturais.</li>
+                        <li><strong>Hospitalidade:</strong> Fijianos são conhecidos por sua calorosa e amigável hospitalidade.</li>
+                    </ul>
+                </div>
+            
+                <div class="desvantagens">
+                    <h3>Desvantagens</h3>
+                    <ul>
+                        <li><strong>Custo:</strong> Viagens e hospedagem podem ser caros.</li>
+                        <li><strong>Acesso Limitado:</strong> Algumas ilhas são de difícil acesso, exigindo transporte adicional.</li>
+                        <li><strong>Períodos de Chuva:</strong> Estação chuvosa de novembro a abril pode trazer chuvas intensas.</li>
+                        <li><strong>Infraestrutura em Desenvolvimento:</strong> Em algumas áreas, a infraestrutura pode ser limitada.</li>
+                        <li><strong>Impacto Ambiental:</strong> O turismo pode afetar negativamente a biodiversidade local.</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2024 Descubra Fiji. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        function toggleInfo(infoId) {
+            const infoDiv = document.getElementById(infoId);
+            infoDiv.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
